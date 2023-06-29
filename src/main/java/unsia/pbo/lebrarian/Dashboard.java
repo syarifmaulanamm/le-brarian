@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.lebrarian;
+package unsia.pbo.lebrarian;
 
 /**
  *
@@ -29,24 +29,26 @@ public class Dashboard extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         BtnPeminjaman = new javax.swing.JButton();
         BtnPengembalian = new javax.swing.JButton();
-        BtnAnggota = new javax.swing.JButton();
+        BtnPustakawan = new javax.swing.JButton();
         BtnBook = new javax.swing.JButton();
-        BtnAnggota1 = new javax.swing.JButton();
+        BtnAnggota = new javax.swing.JButton();
         BtnRiwayatPeminjaman = new javax.swing.JButton();
-        BtnAnggota2 = new javax.swing.JButton();
+        BtnRiwayatPengembalian = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        logoHorizontal1 = new com.mycompany.lebrarian.LogoHorizontal();
         BtnLogOut = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(36, 44, 20));
+        setResizable(false);
 
         jPanel3.setBackground(new java.awt.Color(36, 44, 20));
 
         BtnPeminjaman.setBackground(new java.awt.Color(255, 204, 0));
         BtnPeminjaman.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        BtnPeminjaman.setForeground(new java.awt.Color(0, 0, 0));
         BtnPeminjaman.setText("Peminjaman Buku");
+        BtnPeminjaman.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnPeminjaman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnPeminjamanActionPerformed(evt);
@@ -55,45 +57,62 @@ public class Dashboard extends javax.swing.JFrame {
 
         BtnPengembalian.setBackground(new java.awt.Color(255, 204, 0));
         BtnPengembalian.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
+        BtnPengembalian.setForeground(new java.awt.Color(0, 0, 0));
         BtnPengembalian.setText("Pengembalian Buku");
+        BtnPengembalian.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnPengembalian.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnPengembalianActionPerformed(evt);
             }
         });
 
-        BtnAnggota.setText("Data Pustakawan");
-        BtnAnggota.addActionListener(new java.awt.event.ActionListener() {
+        BtnPustakawan.setBackground(new java.awt.Color(255, 255, 255));
+        BtnPustakawan.setForeground(new java.awt.Color(0, 0, 0));
+        BtnPustakawan.setText("Data Pustakawan");
+        BtnPustakawan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnPustakawan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAnggotaActionPerformed(evt);
+                BtnPustakawanActionPerformed(evt);
             }
         });
 
+        BtnBook.setBackground(new java.awt.Color(255, 255, 255));
+        BtnBook.setForeground(new java.awt.Color(0, 0, 0));
         BtnBook.setText("Data Buku");
+        BtnBook.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnBook.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnBookActionPerformed(evt);
             }
         });
 
-        BtnAnggota1.setText("Data Anggota");
-        BtnAnggota1.addActionListener(new java.awt.event.ActionListener() {
+        BtnAnggota.setBackground(new java.awt.Color(255, 255, 255));
+        BtnAnggota.setForeground(new java.awt.Color(0, 0, 0));
+        BtnAnggota.setText("Data Anggota");
+        BtnAnggota.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnAnggota.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAnggota1ActionPerformed(evt);
+                BtnAnggotaActionPerformed(evt);
             }
         });
 
+        BtnRiwayatPeminjaman.setBackground(new java.awt.Color(255, 255, 255));
+        BtnRiwayatPeminjaman.setForeground(new java.awt.Color(0, 0, 0));
         BtnRiwayatPeminjaman.setText("Riwayat Peminjaman");
+        BtnRiwayatPeminjaman.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         BtnRiwayatPeminjaman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BtnRiwayatPeminjamanActionPerformed(evt);
             }
         });
 
-        BtnAnggota2.setText("Riwayat Pengembalian");
-        BtnAnggota2.addActionListener(new java.awt.event.ActionListener() {
+        BtnRiwayatPengembalian.setBackground(new java.awt.Color(255, 255, 255));
+        BtnRiwayatPengembalian.setForeground(new java.awt.Color(0, 0, 0));
+        BtnRiwayatPengembalian.setText("Riwayat Pengembalian");
+        BtnRiwayatPengembalian.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnRiwayatPengembalian.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnAnggota2ActionPerformed(evt);
+                BtnRiwayatPengembalianActionPerformed(evt);
             }
         });
 
@@ -105,23 +124,16 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MASTER DATA");
 
-        logoHorizontal1.setBackground(new java.awt.Color(36, 44, 20));
-
-        javax.swing.GroupLayout logoHorizontal1Layout = new javax.swing.GroupLayout(logoHorizontal1);
-        logoHorizontal1.setLayout(logoHorizontal1Layout);
-        logoHorizontal1Layout.setHorizontalGroup(
-            logoHorizontal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 136, Short.MAX_VALUE)
-        );
-        logoHorizontal1Layout.setVerticalGroup(
-            logoHorizontal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 62, Short.MAX_VALUE)
-        );
-
         BtnLogOut.setBackground(new java.awt.Color(255, 51, 0));
         BtnLogOut.setForeground(new java.awt.Color(255, 255, 255));
         BtnLogOut.setText("Log Out");
         BtnLogOut.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        BtnLogOut.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        BtnLogOut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnLogOutActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -132,12 +144,12 @@ public class Dashboard extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnPustakawan, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(BtnAnggota1, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(BtnAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(BtnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnAnggota2, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(BtnRiwayatPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(BtnPeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -147,25 +159,15 @@ public class Dashboard extends javax.swing.JFrame {
                             .addComponent(jLabel1)
                             .addComponent(BtnPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(BtnRiwayatPeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
-                        .addGap(160, 160, 160)
-                        .addComponent(logoHorizontal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(BtnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(BtnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(63, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(logoHorizontal1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BtnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)))
-                .addGap(47, 47, 47)
+                .addGap(71, 71, 71)
+                .addComponent(BtnLogOut, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(57, 57, 57)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(BtnPeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BtnPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -180,10 +182,10 @@ public class Dashboard extends javax.swing.JFrame {
                         .addComponent(BtnBook, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(BtnAnggota1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(BtnAnggota2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BtnAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BtnRiwayatPengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addComponent(BtnAnggota, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(BtnPustakawan, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(50, 50, 50))
         );
 
@@ -201,35 +203,52 @@ public class Dashboard extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void BtnPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPengembalianActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_BtnPengembalianActionPerformed
 
-    private void BtnAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAnggotaActionPerformed
+    private void BtnPustakawanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPustakawanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnAnggotaActionPerformed
+        new DataPustakawan().show();
+        this.dispose();
+    }//GEN-LAST:event_BtnPustakawanActionPerformed
 
     private void BtnPeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPeminjamanActionPerformed
         // TODO add your handling code here:
+        new DataPustakawan().show();
+        this.dispose();
     }//GEN-LAST:event_BtnPeminjamanActionPerformed
 
     private void BtnBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBookActionPerformed
         // TODO add your handling code here:
+        new DataBuku().show();
+        this.dispose();
     }//GEN-LAST:event_BtnBookActionPerformed
 
-    private void BtnAnggota1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAnggota1ActionPerformed
+    private void BtnAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAnggotaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnAnggota1ActionPerformed
+        new DataAnggota().show();
+        this.dispose();
+    }//GEN-LAST:event_BtnAnggotaActionPerformed
 
     private void BtnRiwayatPeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRiwayatPeminjamanActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnRiwayatPeminjamanActionPerformed
 
-    private void BtnAnggota2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAnggota2ActionPerformed
+    private void BtnRiwayatPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnRiwayatPengembalianActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_BtnAnggota2ActionPerformed
+    }//GEN-LAST:event_BtnRiwayatPengembalianActionPerformed
+
+    private void BtnLogOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnLogOutActionPerformed
+        // TODO add your handling code here:
+        new Login(null, false).setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_BtnLogOutActionPerformed
 
     /**
      * @param args the command line arguments
@@ -268,16 +287,15 @@ public class Dashboard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BtnAnggota;
-    private javax.swing.JButton BtnAnggota1;
-    private javax.swing.JButton BtnAnggota2;
     private javax.swing.JButton BtnBook;
     private javax.swing.JButton BtnLogOut;
     private javax.swing.JButton BtnPeminjaman;
     private javax.swing.JButton BtnPengembalian;
+    private javax.swing.JButton BtnPustakawan;
     private javax.swing.JButton BtnRiwayatPeminjaman;
+    private javax.swing.JButton BtnRiwayatPengembalian;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel3;
-    private com.mycompany.lebrarian.LogoHorizontal logoHorizontal1;
     // End of variables declaration//GEN-END:variables
 }
