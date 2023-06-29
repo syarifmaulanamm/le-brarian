@@ -2,31 +2,32 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package com.mycompany.lebrarian;
+package unsia.pbo.lebrarian;
 
 import java.awt.Graphics;
 import java.awt.Image;
 import javax.swing.ImageIcon;
+
 /**
  *
  * @author syarifmaulana
  */
-public class LogoHorizontal extends javax.swing.JPanel {
-
+public class Logo extends javax.swing.JPanel {
     private Image image;
     /**
-     * Creates new form LogoHorizontal
+     * Creates new form Logo
      */
-    public LogoHorizontal() {
-    //        initComponents();
-        image = new ImageIcon(getClass().getResource("Images/LOGO-HORIZONTAL.png")).getImage();
+    public Logo() {
+        //initComponents();
+        image = new ImageIcon(getClass().getResource("images/logo.png")).getImage();
         repaint();
     }
-
+    
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,6 +36,8 @@ public class LogoHorizontal extends javax.swing.JPanel {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
+        setBackground(new java.awt.Color(36, 44, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
